@@ -80,5 +80,21 @@ don't “store” data whereas stateful applications requires data to be stored.
 ## port 80... You want loggin to install stuff? Port 22... You need to communicate
 ## to db?
 
+- The instances in the public subnet can send outbound traffic directly to the Internet.
+
+- A public subnet means traffic can enter through specific ports, this can give direct access to the app.
+port 22 however is a more secure port and cannot be accessed directly by a user,
+however the server can access what is inside the database.
+
 ## NAC rules for a our Node-Sample-App DB - Private Siubnet (Where does traffic
 ##  come from?) and where does it need to go?
+
+- The database servers can send and receive Internet traffic through the NAT device in
+the public subnet, it cannot receive traffic itself directly through its elastic IP address.
+
+- The instances in the private subnet can access the Internet by using a network address translation
+(NAT) gateway that resides in the public subnet. The database servers can connect to the Internet
+for software updates using the NAT gateway, but the Internet cannot establish
+connections to the database servers.
+
+- All traffic is routed through a single IP address.

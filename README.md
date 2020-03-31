@@ -59,12 +59,13 @@ he local network.
 
 ## What are Public Subnets?
 
-- 
+- Public Subnet has an Internet Gateway attached which is used by the EC2 instances
+to access the internet.
 
 ## NACIs vs Security Groups? Stateful vs Stateless. (Inbound and Outbound)
 
-## NAC rules for a our Node-Sample-App Public Subnet (Where do cliebts cine in?)
-## port 80... You want loggin to install stufff? Port 22... You need to communicate
+## NAC rules for a our Node-Sample-App Public Subnet (Where do clients come in?)
+## port 80... You want loggin to install stuff? Port 22... You need to communicate
 ## to db?
 
 ## NAC rules for a our Node-Sample-App DB - Private Siubnet (Where does traffic

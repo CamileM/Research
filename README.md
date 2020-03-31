@@ -53,16 +53,28 @@ AND    : 11000000. 10101000. 00000101. 00000000
 
 ## What are Private Subnets?
 
-- Private Subnets consist of private IP addresses and are usually behind a firewall or
-router that performs NAT (Network Address Translation). They only supposed to work within t
-he local network.
+- Private Subnets consist of a private IP address, and they are usually behind a
+firewall or router that performs NAT (Network Address Translation). They only supposed
+to work within the local network.
 
 ## What are Public Subnets?
 
 - Public Subnet has an Internet Gateway attached which is used by the EC2 instances
 to access the internet.
 
-## NACIs vs Security Groups? Stateful vs Stateless. (Inbound and Outbound)
+## NACLs vs Security Groups? (Inbound and Outbound)
+
+- Security Groups: adds a security layer to EC2 instances that control both inbound
+and outbound traffic at the instance level.
+
+- Network Access Control List or NACLs: adds an additional layer of security associated
+with subnets that control both inbound and outbound traffic at the subnet level.
+
+### Stateful vs Stateless.
+
+- The key difference between stateful and stateless applications is that stateless applications
+don't “store” data whereas stateful applications requires data to be stored.
+
 
 ## NAC rules for a our Node-Sample-App Public Subnet (Where do clients come in?)
 ## port 80... You want loggin to install stuff? Port 22... You need to communicate
